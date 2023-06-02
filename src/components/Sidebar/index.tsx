@@ -8,39 +8,36 @@ import {
   BsFillPeopleFill,
   BsHouseDoorFill,
   BsInstagram,
-  BsLinkedin,
   BsGithub,
   BsListCheck,
   BsCaretUpFill,
   BsCaretDownFill,
 } from "react-icons/bs";
-import { AiOutlineLogout } from "react-icons/ai";
-import { FaRegMoneyBillAlt } from "react-icons/fa";
-import { Menu, Transition } from "@headlessui/react";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const menus = [
-  { name: "HOME", link: "/dashboard", icon: BsHouseDoorFill },
+  { name: "HOME", link: "/dashboard", icon: <BsHouseDoorFill /> },
   {
     name: "ABOUT ME",
     link: "dashboard/clientes",
-    icon: BsFillPeopleFill,
+    icon: <BsFillPeopleFill />,
   },
   {
     name: "SERVICES",
     link: "dashboard/procedimentos",
 
-    icon: BsListCheck,
+    icon: <BsListCheck />,
   },
 ];
 const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
+  name: "Lucas Souza",
+  email: "luca.s.ouza@hotmail.com",
   imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "https://avatars.githubusercontent.com/u/55006206?s=400&u=557df4d972199b2a55c50ed83fa760b7a9da15d4&v=4",
 };
 const userRedesSociais = [
   {
-    icon: <BsLinkedin />,
+    icon: <FaLinkedinIn />,
     name: "Linkdin",
     href: "https://www.linkedin.com/in/lucasdesouza-dev/",
   },
@@ -64,144 +61,179 @@ const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(null);
   const [showName, setShowName] = useState(null);
   return (
-    <section className="sticky top-0 z-10 flex   h-full gap-6">
+    <div className="sticky">
       <div
         className={`bg-[#1F2326]  ${
-          open ? "w-60" : "w-16"
-        } h-full px-4 flex flex-col justify-between text-gray-100 duration-500`}
+          open ? "w-64" : "w-16"
+        } h-full relative flex flex-col justify-between text-gray-100 duration-500`}
       >
         <div
-          className={classNames(
-            open ? "justify-between" : "justify-end",
-            "flex py-3 "
-          )}
-        >
-          <HiMenuAlt3
-            size={26}
-            className="cursor-pointer"
-            onClick={() => {
-              setOpen(!open);
-              setIsExpanded(null);
-              console.log(showName);
-            }}
-          />
-        </div>
-        <div className="relative mt-4 flex flex-col gap-4 ">
-          {menus?.map((menu: any, i: any) => {
-            const createSubMenu = !!menu.subMenu;
+          style={{
+            transitionDelay: `300ms`,
+            opacity: !open ? "0" : "1",
+            transition: "2s",
+            transform: !open ? " translateX(4rem)" : "none",
+            overflow: !open ? "hidden" : "",
+          }}
+          className="  absolute top-[-70px] left-[-10px] bg-red-600 w-60 h-60 rounded-full"
+        ></div>
 
-            return (
-              <div key={i} className=" ">
-                {createSubMenu ? (
-                  <div className="w-full">
-                    <div
-                      className={classNames(
-                        isExpanded ? "bg-gray-800" : "",
-                        "group  flex  items-center gap-3.5 rounded-md  p-2 text-sm font-medium hover:bg-gray-800"
-                      )}
-                      onClick={() =>
-                        !open
-                          ? setTimeout(() => {
-                              setIsExpanded(
-                                isExpanded === menu.name ? null : menu.name
-                              );
-                            }, 500)
-                          : setIsExpanded(
-                              isExpanded === menu.name ? null : menu.name
-                            )
-                      }
-                      onMouseEnter={() => setShowName(menu.name)}
-                      onMouseLeave={() => setShowName(null)}
-                      style={{
-                        marginTop: menu?.margin ? "5px" : "0px",
-                      }}
-                    >
-                      <div
-                        onClick={() => {
-                          !open && setOpen(!open);
-                        }}
-                      >
-                        {React.createElement(menu?.icon, { size: "20" })}
-                      </div>
-                      <h2
-                        style={{
-                          transitionDelay: `${i + 3}00ms`,
-                          opacity: !open ? "0" : "1",
-                          transition: "1s",
-                          transform: !open ? " translateX(8rem)" : "none",
-                          overflow: !open ? "hidden" : "",
-                        }}
-                      >
-                        {open && menu?.name}
-                      </h2>
-                      {!open && (
-                        <h2
-                          className={`absolute left-48 z-10 w-0 overflow-hidden whitespace-pre rounded-md bg-white px-0 py-0 font-semibold text-gray-900 drop-shadow-lg group-hover:left-14 group-hover:w-fit group-hover:px-2 group-hover:py-1 group-hover:duration-300  `}
-                        >
-                          {menu?.name}
-                        </h2>
-                      )}
-                      <div
-                        style={{
-                          transitionDelay: `${i + 3}00ms`,
-                          opacity: !open ? "0" : "1",
-                          transition: "1s",
-                          transform: !open ? " translateX(8rem)" : "none",
-                          overflow: !open ? "hidden" : "",
-                        }}
-                        className="flex w-full justify-end"
-                      >
-                        {createSubMenu &&
-                          (isExpanded === menu.name ? (
-                            <BsCaretUpFill />
-                          ) : (
-                            <BsCaretDownFill />
-                          ))}
-                      </div>
-                    </div>
+        <div className="z-10 h-1/2 flex flex-col justify-between">
+          <div className=" h-1/2  flex  flex-col justify-around items-center rounded">
+            <div
+              className={classNames(
+                !open ? "justify-center" : "justify-end",
+                "z-10 w-full flex py-3 "
+              )}
+            >
+              <HiMenuAlt3
+                size={26}
+                className="cursor-pointer"
+                onClick={() => {
+                  setOpen(!open);
+                  setIsExpanded(null);
+                  console.log(showName);
+                }}
+              />
+            </div>
+            <div
+              className={classNames(
+                !open ? "px-2" : "",
+                " h-2/4 flex flex-col justify-around items-center"
+              )}
+            >
+              <Image
+                className="rounded-full border-4 border-white"
+                src={user.imageUrl}
+                width={100}
+                height={100}
+                alt="Picture of the author"
+              />
 
-                    {createSubMenu && isExpanded === menu.name && (
-                      <SubMenu items={menu.subMenu} />
-                    )}
-                  </div>
-                ) : (
-                  <div>
-                    <Link
-                      href={menu?.link}
-                      className={classNames(
-                        menu?.margin && "mt-5",
-                        "group  flex items-center gap-3.5  rounded-md p-2 text-sm font-medium hover:bg-gray-800"
-                      )}
-                    >
-                      <div>
-                        {React.createElement(menu?.icon, { size: "20" })}
-                      </div>
-                      <h2
-                        style={{
-                          transitionDelay: `${i + 3}00ms`,
-                        }}
+              {open && (
+                <div className="text-lg ">
+                  <h1>{user.name}</h1>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="relative px-4 mt-4 flex flex-col gap-4 ">
+            {menus?.map((menu: any, i: any) => {
+              const createSubMenu = !!menu.subMenu;
+
+              return (
+                <div key={i} className=" ">
+                  {createSubMenu ? (
+                    <div className="w-full">
+                      <div
                         className={classNames(
+                          isExpanded ? "bg-gray-800" : "",
+                          "group  flex  items-center gap-3.5 rounded-md  p-2 text-sm font-medium hover:bg-gray-800"
+                        )}
+                        onClick={() =>
                           !open
-                            ? "translate-x-28 overflow-hidden opacity-0"
-                            : "",
-                          "whitespace-pre duration-500"
+                            ? setTimeout(() => {
+                                setIsExpanded(
+                                  isExpanded === menu.name ? null : menu.name
+                                );
+                              }, 500)
+                            : setIsExpanded(
+                                isExpanded === menu.name ? null : menu.name
+                              )
+                        }
+                        onMouseEnter={() => setShowName(menu.name)}
+                        onMouseLeave={() => setShowName(null)}
+                        style={{
+                          marginTop: menu?.margin ? "5px" : "0px",
+                        }}
+                      >
+                        <div
+                          onClick={() => {
+                            !open && setOpen(!open);
+                          }}
+                        >
+                          {menu?.icon}
+                        </div>
+                        <h2
+                          style={{
+                            transitionDelay: `${i + 3}00ms`,
+                            opacity: !open ? "0" : "1",
+                            transition: "1s",
+                            transform: !open ? " translateX(8rem)" : "none",
+                            overflow: !open ? "hidden" : "",
+                          }}
+                        >
+                          {open && menu?.name}
+                        </h2>
+                        {!open && (
+                          <h2
+                            className={`absolute left-48 z-10 w-0 overflow-hidden whitespace-pre rounded-md bg-white px-0 py-0 font-semibold text-gray-900 drop-shadow-lg group-hover:left-14 group-hover:w-fit group-hover:px-2 group-hover:py-1 group-hover:duration-300  `}
+                          >
+                            {menu?.name}
+                          </h2>
+                        )}
+                        <div
+                          style={{
+                            transitionDelay: `${i + 3}00ms`,
+                            opacity: !open ? "0" : "1",
+                            transition: "1s",
+                            transform: !open ? " translateX(8rem)" : "none",
+                            overflow: !open ? "hidden" : "",
+                          }}
+                          className="flex w-full justify-end"
+                        >
+                          {createSubMenu &&
+                            (isExpanded === menu.name ? (
+                              <BsCaretUpFill />
+                            ) : (
+                              <BsCaretDownFill />
+                            ))}
+                        </div>
+                      </div>
+
+                      {createSubMenu && isExpanded === menu.name && (
+                        <SubMenu items={menu.subMenu} />
+                      )}
+                    </div>
+                  ) : (
+                    <div>
+                      <Link
+                        href={menu?.link}
+                        className={classNames(
+                          menu?.margin && "mt-5",
+                          "group hover:text-red-600  flex items-center gap-3.5  rounded-md p-2 text-sm font-medium hover:bg-gray-800"
                         )}
                       >
-                        {menu?.name}
-                      </h2>
-                      {!open && (
+                        <div className="delay-300 text-xl duration-500">
+                          {menu?.icon}
+                        </div>
                         <h2
-                          className={`absolute left-48 z-10 w-0 overflow-hidden whitespace-pre rounded-md bg-white px-0 py-0 font-semibold text-gray-900 drop-shadow-lg group-hover:left-14 group-hover:w-fit group-hover:px-2 group-hover:py-1 group-hover:duration-300  `}
+                          style={{
+                            transitionDelay: `${i + 3}00ms`,
+                          }}
+                          className={classNames(
+                            !open
+                              ? "translate-x-28 overflow-hidden opacity-0"
+                              : "",
+                            "whitespace-pre duration-500  "
+                          )}
                         >
                           {menu?.name}
                         </h2>
-                      )}
-                    </Link>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                        {!open && (
+                          <h2
+                            className={`absolute left-48 z-10 w-0 overflow-hidden whitespace-pre rounded-md bg-white px-0 py-0 font-semibold text-gray-900 drop-shadow-lg group-hover:left-14 group-hover:w-fit group-hover:px-2 group-hover:py-1 group-hover:duration-300  `}
+                          >
+                            {menu?.name}
+                          </h2>
+                        )}
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div
           style={{
@@ -209,19 +241,22 @@ const Sidebar = () => {
             transition: "2s",
             transform: open ? " translate(1rem)" : "none",
           }}
-          className={classNames(open ? " flex justify-center " : " block")}
+          className={classNames(
+            open ? " flex justify-center " : " block",
+            "m-4"
+          )}
         >
           {userRedesSociais.map((item) => (
             <div
               style={{
                 transitionDelay: `300ms`,
-                transition: "2s",
+                transition: "1s",
                 transform: open ? " translate(1rem)" : "none",
               }}
               key={item.name}
               className={classNames(
-                open ? " m-2 " : "mb-2",
-                "flex   text-xl text-white justify-center"
+                open ? " justify-between " : "mb-2",
+                "hover:text-red-600 flex w-full  text-xl text-white justify-center"
               )}
             >
               <a href={item.href} className="cursor-pointer">
@@ -231,7 +266,7 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
