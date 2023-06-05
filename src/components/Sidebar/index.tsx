@@ -23,8 +23,8 @@ const menus = [
     icon: <TfiIdBadge />,
   },
   {
-    name: "Serviços",
-    link: "servicos",
+    name: "Skills",
+    link: "#skills",
 
     icon: <BsListCheck />,
   },

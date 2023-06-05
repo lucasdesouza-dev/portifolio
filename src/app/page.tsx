@@ -1,3 +1,4 @@
+import Skills from "@/components/Skills";
 import About from "@/components/about";
 import HomeUser from "@/components/homeUser";
 import { Metadata } from "next";
@@ -18,6 +19,7 @@ export default function Home() {
     <main className=" w-full h-full flex flex-col overflow-auto">
       <HomeUser name={user.name} email={user.email} imageUrl={user.imageUrl} />
       <About />
+      <Skills />
     </main>
   );
 }
