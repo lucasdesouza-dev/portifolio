@@ -7,8 +7,11 @@ interface User {
 }
 export default function HomeUser({ name, imageUrl, email }: User) {
   return (
-    <div className="relative w-full h-full flex overflow-hidden">
-      <div className="font-semibold w-1/2 p-10 flex flex-col justify-center">
+    <section
+      id="home"
+      className="relative w-full h-full min-h-screen flex overflow-hidden "
+    >
+      <div className="font-semibold w-1/2 p-14 flex flex-col justify-center">
         <h1 className="my-4 text-2xl">Olá, bem vindo ao meu portifólio! </h1>
         <div className="h-2/5 flex flex-col justify-between">
           <h2 className="text-xl my-2">
@@ -27,7 +30,7 @@ export default function HomeUser({ name, imageUrl, email }: User) {
             web e lojas online.
           </p>
           <a
-            href="#_"
+            href=""
             className="w-40 my-4 relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
           >
             <span className="w-48 h-48 rounded rotate-[-40deg] bg-red-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
@@ -47,6 +50,6 @@ export default function HomeUser({ name, imageUrl, email }: User) {
           alt="Picture of the author"
         />
       </div>
-    </div>
+    </section>
   );
 }

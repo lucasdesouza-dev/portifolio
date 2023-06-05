@@ -15,8 +15,9 @@ const user = {
 };
 export default function Home() {
   return (
-    <main className=" w-full  flex flex-col overflow-auto">
+    <main className=" w-full h-full flex flex-col overflow-auto">
       <HomeUser name={user.name} email={user.email} imageUrl={user.imageUrl} />
+      <About />
     </main>
   );
 }

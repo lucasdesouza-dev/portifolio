@@ -5,7 +5,6 @@ import SubMenu from "./SubMenu";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  BsFillPeopleFill,
   BsHouseDoorFill,
   BsInstagram,
   BsGithub,
@@ -14,17 +13,18 @@ import {
   BsCaretDownFill,
 } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
+import { TfiIdBadge } from "react-icons/tfi";
 
 const menus = [
-  { name: "HOME", link: "/dashboard", icon: <BsHouseDoorFill /> },
+  { name: "HOME", link: "#home", icon: <BsHouseDoorFill /> },
   {
-    name: "ABOUT ME",
-    link: "dashboard/clientes",
-    icon: <BsFillPeopleFill />,
+    name: "Sobre",
+    link: "#sobre",
+    icon: <TfiIdBadge />,
   },
   {
-    name: "SERVICES",
-    link: "dashboard/procedimentos",
+    name: "Serviços",
+    link: "servicos",
 
     icon: <BsListCheck />,
   },
@@ -197,7 +197,7 @@ const Sidebar = () => {
                     </div>
                   ) : (
                     <div>
-                      <Link
+                      <a
                         href={menu?.link}
                         className={classNames(
                           menu?.margin && "mt-5",
@@ -227,7 +227,7 @@ const Sidebar = () => {
                             {menu?.name}
                           </h2>
                         )}
-                      </Link>
+                      </a>
                     </div>
                   )}
                 </div>
