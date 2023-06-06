@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "../Button";
 
 interface User {
   name: string;
@@ -29,15 +30,7 @@ export default function HomeUser({ name, imageUrl, email }: User) {
             especializado na criação de sites elegantes e modernos, serviços da
             web e lojas online.
           </p>
-          <a
-            href=""
-            className="w-40 my-4 relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
-          >
-            <span className="w-48 h-48 rounded rotate-[-40deg] bg-red-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-            <span className="relative w-full text-left text-[#1F2326] transition-colors duration-300 ease-in-out group-hover:text-white">
-              Donwload CV
-            </span>
-          </a>
+          <Button>Donwload CV</Button>
         </div>
       </div>
       <div className="absolute top-[-10rem] right-[-12rem] w-[60rem] h-[60rem] rounded-full bg-[#1F2326] opacity-30"></div>
