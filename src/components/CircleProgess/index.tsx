@@ -23,7 +23,7 @@ export default function CircleProgress({ titulo, valor, icon }: Props) {
       >
         {icon}
         <div>
-          <strong className="">{titulo}</strong>
+          <p className="text-gray-700 font-bold">{titulo}</p>
         </div>
       </CircularProgressbarWithChildren>
     </div>

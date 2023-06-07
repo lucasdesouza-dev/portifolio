@@ -8,12 +8,13 @@ import {
   BsHouseDoorFill,
   BsInstagram,
   BsGithub,
-  BsListCheck,
   BsCaretUpFill,
   BsCaretDownFill,
 } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TfiIdBadge } from "react-icons/tfi";
+import { SiCodefactor } from "react-icons/si";
+import { GiSkills } from "react-icons/gi";
 
 const menus = [
   { name: "HOME", link: "#home", icon: <BsHouseDoorFill /> },
@@ -26,7 +27,13 @@ const menus = [
     name: "Skills",
     link: "#skills",
 
-    icon: <BsListCheck />,
+    icon: <GiSkills />,
+  },
+  {
+    name: "Projetos",
+    link: "#projetos",
+
+    icon: <SiCodefactor />,
   },
 ];
 const user = {
@@ -92,7 +99,6 @@ const Sidebar = () => {
                 onClick={() => {
                   setOpen(!open);
                   setIsExpanded(null);
-                  console.log(showName);
                 }}
               />
             </div>

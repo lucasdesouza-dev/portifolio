@@ -1,3 +1,4 @@
+import Projetos from "@/components/Projetos";
 import Skills from "@/components/Skills";
 import About from "@/components/about";
 import HomeUser from "@/components/homeUser";
@@ -20,6 +21,7 @@ export default function Home() {
       <HomeUser name={user.name} email={user.email} imageUrl={user.imageUrl} />
       <About />
       <Skills />
+      <Projetos />
     </main>
   );
 }
