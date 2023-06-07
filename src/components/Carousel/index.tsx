@@ -64,7 +64,7 @@ export default function Carousel() {
     <motion.div className="w-full px-10 display flex justify-center items-center">
       <motion.div
         ref={carousel}
-        className="cursor-grab overflow-hidden "
+        className="cursor-grab overflow-hidden w-full "
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
@@ -75,7 +75,7 @@ export default function Carousel() {
           {cards.map((item, index) => {
             const { urlGit, urlDemo, descricao, titulo, tecnologias } = item;
             return (
-              <motion.div key={index}>
+              <motion.div key={index} className="w-full">
                 <CardProjetos
                   titulo={titulo}
                   urlGit={urlGit}

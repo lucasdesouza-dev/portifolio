@@ -41,14 +41,15 @@ export default function CardProjetos({
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {descricao}
         </p>
-
-        {api && (
-          <div className="flex flex-col gap-2 border-y-2 border-gray-300 justify-center items-center">
-            <h1 className="font-semibold">Referencias </h1>
-            <a href={api.urlApi}>{api.titulo}</a>
-          </div>
-        )}
-        <div className="flex flex-wrap justify-center gap-2">
+        <div className="p-2">
+          {api && (
+            <div className="flex flex-col gap-2 border-y-2 border-gray-300 justify-center items-center">
+              <h1 className="font-semibold">Referencias </h1>
+              <a href={api.urlApi}>{api.titulo}</a>
+            </div>
+          )}
+        </div>
+        <div className="flex flex-wrap justify-center gap-2 m-2">
           {tecnologias?.map((item, i) => {
             return (
               <div
