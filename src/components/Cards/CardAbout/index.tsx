@@ -1,8 +1,6 @@
 import Image from "next/image";
+import { classNames } from "../../../services/Methods.service";
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 interface Props {
   src: string;
   w: number;

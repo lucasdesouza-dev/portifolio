@@ -4,11 +4,9 @@ import "./globals.scss";
 import { Inter } from "next/font/google";
 import DarkMode from "@/components/darkMode";
 import { useState } from "react";
-const inter = Inter({ subsets: ["latin"] });
+import { classNames } from "../services/Methods.service";
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -23,11 +21,8 @@ export default function RootLayout({
   }
 
   return (
-    <html
-      lang="en"
-      className={classNames(toggle ? "dark" : "", "scroll-smooth")}
-    >
-      <body className={`${inter.className} w-screen h-screen flex`}>
+    <html lang="en" className={classNames(toggle ? "dark" : "")}>
+      <body className={`${inter.className}  w-screen h-screen flex`}>
         <DarkMode valorToggle={valorToggle} size={35} />
         <Sidebar />
         {children}

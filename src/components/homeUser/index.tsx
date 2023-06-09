@@ -42,7 +42,8 @@ export default function HomeUser({ name, imageUrl, email }: User) {
       </div>
       <div className="absolute top-[-10rem] right-[-12rem] w-[60rem] h-[60rem] rounded-full bg-[#1F2326] opacity-30"></div>
       <motion.div
-        animate={{ x: [0, 50, 100, 0], repeatDur: 10 }}
+        animate={{ y: [-50, 0, 50, 0, -50], x: [0, 100, 0] }}
+        transition={{ ease: "linear", duration: 3, repeat: Infinity }}
         className="  w-1/2 flex justify-center items-center"
       >
         <Image

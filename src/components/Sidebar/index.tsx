@@ -4,6 +4,8 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import SubMenu from "./SubMenu";
 import Link from "next/link";
 import Image from "next/image";
+import { classNames } from "../../services/Methods.service";
+
 import {
   BsHouseDoorFill,
   BsInstagram,
@@ -38,19 +40,16 @@ const menus = [
   },
 ];
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(null);
   const [showName, setShowName] = useState(null);
   return (
-    <div className="sticky">
+    <div className=" sticky   max-w-[16rem]">
       <div
         className={`bg-[#1F2326]  ${
           open ? "w-64" : "w-16"
-        } h-full relative flex flex-col justify-between text-gray-100 duration-500`}
+        } h-full relative overflow-hidden flex flex-col justify-between text-gray-100 duration-500`}
       >
         <div
           style={{

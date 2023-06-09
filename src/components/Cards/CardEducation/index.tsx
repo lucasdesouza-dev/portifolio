@@ -1,6 +1,5 @@
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+import { classNames } from "../../../services/Methods.service";
+
 interface Props {
   titulo: string;
   descricao: string;
