@@ -47,9 +47,9 @@ const Sidebar = () => {
   return (
     <div className=" sticky   max-w-[16rem]">
       <div
-        className={`bg-[#1F2326]  ${
+        className={`bg-[#f7f7ff]  ${
           open ? "w-64" : "w-16"
-        } h-full relative overflow-hidden flex flex-col justify-between text-gray-100 duration-500`}
+        } dark:bg-[#1F2326] dark:text-white h-full relative overflow-hidden flex flex-col justify-between text-gray-900 duration-500`}
       >
         <div
           style={{
@@ -184,7 +184,7 @@ const Sidebar = () => {
                         href={menu?.link}
                         className={classNames(
                           menu?.margin && "mt-5",
-                          "group hover:text-red-600  flex items-center gap-3.5  rounded-md p-2 text-sm font-medium hover:bg-gray-800"
+                          "group hover:text-red-600  flex items-center gap-3.5  rounded-md p-2 text-sm font-medium "
                         )}
                       >
                         <div className="delay-300 text-xl duration-500">
@@ -203,13 +203,13 @@ const Sidebar = () => {
                         >
                           {menu?.name}
                         </h2>
-                        {!open && (
+                        {/* {!open && (
                           <h2
                             className={`absolute left-48 z-10 w-0 overflow-hidden whitespace-pre rounded-md bg-white px-0 py-0 font-semibold text-gray-900 drop-shadow-lg group-hover:left-14 group-hover:w-fit group-hover:px-2 group-hover:py-1 group-hover:duration-300  `}
                           >
                             {menu?.name}
                           </h2>
-                        )}
+                        )} */}
                       </a>
                     </div>
                   )}
@@ -226,7 +226,7 @@ const Sidebar = () => {
           }}
           className={classNames(
             open ? " flex justify-center " : " block",
-            "m-4"
+            "m-4 "
           )}
         >
           {user.userRedesSociais.map((item) => (
@@ -239,10 +239,10 @@ const Sidebar = () => {
               key={item.name}
               className={classNames(
                 open ? " justify-between " : "mb-2",
-                "hover:text-red-600 flex w-full  text-xl text-white justify-center"
+                "hover:text-red-600 flex w-full  dark:text-white text-xl text-gray-900 justify-center"
               )}
             >
-              <a href={item.href} className="cursor-pointer">
+              <a href={item.href} className="cursor-pointer delay-300">
                 {React.createElement(item?.icon, { size: "20" })}
               </a>
             </div>
