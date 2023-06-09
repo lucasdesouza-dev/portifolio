@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Button from "../Button";
+import { motion } from "framer-motion";
 
 interface User {
   name: string;
@@ -30,11 +32,19 @@ export default function HomeUser({ name, imageUrl, email }: User) {
             especializado na criação de sites elegantes e modernos, serviços da
             web e lojas online.
           </p>
-          <Button>Donwload CV</Button>
+          <Button
+            href="
+          /CurriculoLucas.pdf"
+          >
+            Donwload CV
+          </Button>
         </div>
       </div>
       <div className="absolute top-[-10rem] right-[-12rem] w-[60rem] h-[60rem] rounded-full bg-[#1F2326] opacity-30"></div>
-      <div className="  w-1/2 flex justify-center items-center">
+      <motion.div
+        animate={{ x: [0, 50, 100, 0], repeatDur: 10 }}
+        className="  w-1/2 flex justify-center items-center"
+      >
         <Image
           className="rounded-full border-4 border-white z-10"
           src={imageUrl}
@@ -42,7 +52,7 @@ export default function HomeUser({ name, imageUrl, email }: User) {
           height={500}
           alt="Picture of the author"
         />
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import Projetos from "@/components/Projetos";
 import Skills from "@/components/Skills";
 import About from "@/components/about";
+import Footer from "@/components/footer";
 import HomeUser from "@/components/homeUser";
 import { Metadata } from "next";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projetos />
+      <Footer />
     </main>
   );
 }

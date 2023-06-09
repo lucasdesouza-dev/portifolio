@@ -10,12 +10,13 @@ import {
   BsGithub,
   BsCaretUpFill,
   BsCaretDownFill,
+  BsWhatsapp,
 } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TfiIdBadge } from "react-icons/tfi";
 import { SiCodefactor } from "react-icons/si";
 import { GiSkills } from "react-icons/gi";
-
+import user from "../../services/User.service";
 const menus = [
   { name: "HOME", link: "#home", icon: <BsHouseDoorFill /> },
   {
@@ -34,29 +35,6 @@ const menus = [
     link: "#projetos",
 
     icon: <SiCodefactor />,
-  },
-];
-const user = {
-  name: "Lucas Souza",
-  email: "luca.s.ouza@hotmail.com",
-  imageUrl:
-    "https://avatars.githubusercontent.com/u/55006206?s=400&u=557df4d972199b2a55c50ed83fa760b7a9da15d4&v=4",
-};
-const userRedesSociais = [
-  {
-    icon: <FaLinkedinIn />,
-    name: "Linkdin",
-    href: "https://www.linkedin.com/in/lucasdesouza-dev/",
-  },
-  {
-    icon: <BsGithub />,
-    name: "Github",
-    href: "https://github.com/lucasdesouza-dev",
-  },
-  {
-    icon: <BsInstagram />,
-    name: "Instagram",
-    href: "https://www.instagram.com/luccashsouza/",
   },
 ];
 
@@ -252,7 +230,7 @@ const Sidebar = () => {
             "m-4"
           )}
         >
-          {userRedesSociais.map((item) => (
+          {user.userRedesSociais.map((item) => (
             <div
               style={{
                 transitionDelay: `300ms`,
@@ -266,7 +244,7 @@ const Sidebar = () => {
               )}
             >
               <a href={item.href} className="cursor-pointer">
-                {item.icon}
+                {React.createElement(item?.icon, { size: "20" })}
               </a>
             </div>
           ))}
