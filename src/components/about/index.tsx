@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className=" flex items-center w-full h-full min-h-screen bg-gray-200"
+      className=" flex items-center w-full h-full min-h-screen bg-gray-200 dark:bg-[#1F2326]"
     >
       <div className="relative w-1/2 flex flex-col  items-center">
         <div className="absolute right-3/4 top-[42%]  ml-auto m-2  w-8 h-8 rounded-full bg-red-600"></div>
@@ -28,7 +28,7 @@ export default function About() {
         </div>
       </div>
       <div className="w-1/2 font-semibold p-4">
-        <h1 className=" text-2xl border-b-2 w-1/4 border-red-600 text-red-600 dark:text-yellow-600">
+        <h1 className=" text-2xl border-b-2 w-1/4 border-red-600 text-red-600 ">
           Sobre Mim
         </h1>
 

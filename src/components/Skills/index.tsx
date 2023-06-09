@@ -18,43 +18,10 @@ import {
   SiDocker,
   SiPostgresql,
 } from "react-icons/si";
-
+import user from "@/services/User.service";
 import CardEducation from "../Cards/CardEducation";
 import CircleProgress from "../CircleProgess";
 import "react-circular-progressbar/dist/styles.css";
-import Button from "../Button";
-import MouseOverPopover from "../MouseOverPopover";
-import { text } from "stream/consumers";
-
-const educacao = [
-  {
-    titulo: "Análise e Desenvolvimento de Sistemas",
-    descricao:
-      "Análise e Desenvolvimento de Sistemas é a área da tecnologia responsável por projetar, desenvolver e implementar softwares para atender as necessidades das empresas, utilizando técnicas de programação e gestão de projetos para criar soluções inovadoras e eficientes.",
-    periodo: {
-      inicial: "2021",
-      termino: "2023",
-    },
-  },
-  {
-    titulo: "Desenvolvimento Front-End",
-    descricao:
-      "O profissional desenvolvedor front-end é o responsável por colocar em prática, através de códigos, o design de um site ou interface. Enquanto o web design projeta o visual de um site, o desenvolvimento front-end implementa esse design através de códigos, como HTML, CSS e JavaScript e suas Frameworks.",
-    periodo: {
-      inicial: "2021",
-      termino: "2023",
-    },
-  },
-  {
-    titulo: "Desenvolvimento Back-End",
-    descricao:
-      "O desenvolvedor back-end trabalha na parte de “trás” da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio. Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação.",
-    periodo: {
-      inicial: "2021",
-      termino: "2023",
-    },
-  },
-];
 
 const skillsFront = [
   {
@@ -67,7 +34,7 @@ const skillsFront = [
   {
     titulo: "Next.JS",
     valor: 80,
-    icon: <SiNextdotjs size={55} color="#000000" />,
+    icon: <SiNextdotjs size={55} color="#2D3748" />,
 
     text: "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
   },
@@ -165,13 +132,14 @@ export default function Skills() {
     >
       <div className="w-1/2 flex flex-col  items-center justify-center">
         <div className="flex flex-wrap gap-2 justify-center">
-          {educacao.map((item: any, i: number) => {
+          {user.educacao.map((item: any, i: number) => {
             return (
               <div key={i}>
                 <CardEducation
                   titulo={item.titulo}
                   descricao={item.descricao}
                   periodo={item.periodo}
+                  href={item.href}
                 />
               </div>
             );
@@ -179,7 +147,7 @@ export default function Skills() {
         </div>
       </div>
       <div className="w-1/2 font-semibold p-4">
-        <h1 className="text-2xl border-b-2 w-1/4 border-red-600 text-red-600 dark:text-yellow-600">
+        <h1 className="text-2xl border-b-2 w-1/4 border-red-600 text-red-600 ">
           Minhas Skills
         </h1>
 

@@ -1,7 +1,8 @@
 import Image from "next/image";
-import React from "react";
+import React, { ReactNode } from "react";
 import moviesLibGif from "../../../../public/Movies-Lib.gif";
 import { BsFillArrowUpRightSquareFill, BsGithub } from "react-icons/bs";
+import { IconType } from "react-icons";
 const user = {
   name: "Lucas Souza",
   email: "luca.s.ouza@hotmail.com",
@@ -12,10 +13,10 @@ const user = {
 interface Props {
   titulo: string;
   descricao: string;
-  tecnologias: { titulo: string; icon: any }[];
+  tecnologias?: { titulo: string; icon: ReactNode }[];
   urlGit: string;
   urlDemo: string;
-  api?: { urlApi: string; titulo: string };
+  referencias?: { url: string; titulo: string };
 }
 export default function CardProjetos({
   titulo,
@@ -23,7 +24,7 @@ export default function CardProjetos({
   tecnologias,
   urlGit,
   urlDemo,
-  api,
+  referencias,
 }: Props) {
   return (
     <div className="flex flex-col p-10 w-[60rem] h-full max-h-[40rem] items-center justify-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -42,10 +43,10 @@ export default function CardProjetos({
           {descricao}
         </p>
         <div className="p-2">
-          {api && (
+          {referencias && (
             <div className="flex flex-col gap-2 border-y-2 border-gray-300 justify-center items-center">
               <h1 className="font-semibold">Referencias </h1>
-              <a href={api.urlApi}>{api.titulo}</a>
+              <a href={referencias.url}>{referencias.titulo}</a>
             </div>
           )}
         </div>

@@ -1,11 +1,10 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { BiCodeBlock } from "react-icons/bi";
 import CardProjetos from "../Cards/CardProjetos";
 import {
   SiCss3,
-  SiNextdotjs,
+  SiGraphql,
   SiReact,
   SiTypescript,
   SiVite,
@@ -15,8 +14,8 @@ const cards = [
   {
     urlGit: "https://github.com/lucasdesouza-dev/The-Movie-App",
     urlDemo: "https://the-movie-app-git-master-lucashenriquesouza.vercel.app",
-    api: {
-      urlApi: "https://developer.themoviedb.org/docs",
+    referencias: {
+      url: "https://developer.themoviedb.org/docs",
       titulo: "Themoviedb",
     },
     descricao:
@@ -30,24 +29,47 @@ const cards = [
     titulo: "MoviesLib",
   },
   {
-    urlGit: "",
+    urlGit: "https://github.com/lucasdesouza-dev/Projeto-ignite-Lab",
+    urlDemo:
+      "https://projeto-ignite-lab-git-main-lucashenriquesouza.vercel.app",
+    descricao:
+      "Projeto onde desenvolvo uma plataforma de eventos  junto com ignite lab da rocketseat implementandoas tecnologias abaixo !",
+    tecnologias: [
+      { titulo: "React.js", icon: <SiReact /> },
+      { titulo: "Vite.js", icon: <SiVite /> },
+      { titulo: "Css3", icon: <SiCss3 /> },
+      { titulo: "Typescript", icon: <SiTypescript /> },
+      { titulo: "Graphql", icon: <SiGraphql /> },
+    ],
+    referencias: {
+      url: "https://www.rocketseat.com.br/ignite",
+      titulo: "Ignite-Lab Rocketseat",
+    },
+    titulo: "Ignite-Lab",
+  },
+  {
+    urlGit: "https://github.com/lucasdesouza-dev/Calculadora",
     urlDemo: "",
-    descricao: "loresldjhaskjfbk kjhdkja kjahdkja hdkjah kjdhkjhkjhdkjha jkh",
-    tecnologias: [{ titulo: "", icon: "" }],
-    titulo: "Mergulhe no JavaScript com TypeScript",
+    descricao: "Simulando uma calculadora com designer da Apple",
+    tecnologias: [
+      { titulo: "React.js", icon: <SiReact /> },
+      { titulo: "Vite.js", icon: <SiVite /> },
+      { titulo: "Css3", icon: <SiCss3 /> },
+      { titulo: "Typescript", icon: <SiTypescript /> },
+      ,
+    ],
+    titulo: "Calculadora ",
   },
   {
     urlGit: "",
     urlDemo: "",
     descricao: "loresldjhaskjfbk kjhdkja kjahdkja hdkjah kjdhkjhkjhdkjha jkh",
-    tecnologias: [{ titulo: "", icon: "" }],
-    titulo: "Mergulhe no JavaScript com TypeScript",
-  },
-  {
-    urlGit: "",
-    urlDemo: "",
-    descricao: "loresldjhaskjfbk kjhdkja kjahdkja hdkjah kjdhkjhkjhdkjha jkh",
-    tecnologias: [{ titulo: "", icon: "" }],
+    tecnologias: [
+      { titulo: "React.js", icon: <SiReact /> },
+      { titulo: "Vite.js", icon: <SiVite /> },
+      { titulo: "Css3", icon: <SiCss3 /> },
+      { titulo: "Typescript", icon: <SiTypescript /> },
+    ],
     titulo: "Mergulhe no JavaScript com TypeScript",
   },
 ];
@@ -82,7 +104,7 @@ export default function Carousel() {
                   urlDemo={urlDemo}
                   descricao={descricao}
                   tecnologias={tecnologias}
-                  api={item.api}
+                  referencias={item.referencias}
                 />
               </motion.div>
             );

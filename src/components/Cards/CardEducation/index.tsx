@@ -3,17 +3,23 @@ import { classNames } from "../../../services/Methods.service";
 interface Props {
   titulo: string;
   descricao: string;
+  href: string;
   periodo: {
     inicial: string;
     termino: string;
   };
 }
-export default function CardEducation({ titulo, descricao, periodo }: Props) {
+export default function CardEducation({
+  href,
+  titulo,
+  descricao,
+  periodo,
+}: Props) {
   return (
-    <div className="w-full ">
+    <div className="w-full h-56">
       <a
-        href="#"
-        className="block max-w-xl  bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+        href={href}
+        className="block max-w-xl h-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#1F2326] dark:border-[#1F2326] dark:hover:bg-[#333a3f] "
       >
         <div className="text-center text-white mt-2 w-1/4 rounded-e-lg bg-red-600">
           <p>

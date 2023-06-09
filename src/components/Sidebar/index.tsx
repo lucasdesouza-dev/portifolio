@@ -19,6 +19,7 @@ import { TfiIdBadge } from "react-icons/tfi";
 import { SiCodefactor } from "react-icons/si";
 import { GiSkills } from "react-icons/gi";
 import user from "../../services/User.service";
+import RedesSociais from "../RedesSociais";
 const menus = [
   { name: "HOME", link: "#home", icon: <BsHouseDoorFill /> },
   {
@@ -49,7 +50,7 @@ const Sidebar = () => {
       <div
         className={`bg-[#f7f7ff]  ${
           open ? "w-64" : "w-16"
-        } dark:bg-[#1F2326] dark:text-white h-full relative overflow-hidden flex flex-col justify-between text-gray-900 duration-500`}
+        } dark:bg-[#1F2326] dark:text-white border-r dark:border-r-white h-full relative overflow-hidden flex flex-col justify-between text-gray-900 duration-500`}
       >
         <div
           style={{
@@ -218,36 +219,8 @@ const Sidebar = () => {
             })}
           </div>
         </div>
-        <div
-          style={{
-            transitionDelay: `300ms`,
-            transition: "2s",
-            transform: open ? " translate(1rem)" : "none",
-          }}
-          className={classNames(
-            open ? " flex justify-center " : " block",
-            "m-4 "
-          )}
-        >
-          {user.userRedesSociais.map((item) => (
-            <div
-              style={{
-                transitionDelay: `300ms`,
-                transition: "1s",
-                transform: open ? " translate(1rem)" : "none",
-              }}
-              key={item.name}
-              className={classNames(
-                open ? " justify-between " : "mb-2",
-                "hover:text-red-600 flex w-full  dark:text-white text-xl text-gray-900 justify-center"
-              )}
-            >
-              <a href={item.href} className="cursor-pointer delay-300">
-                {React.createElement(item?.icon, { size: "20" })}
-              </a>
-            </div>
-          ))}
-        </div>
+
+        <RedesSociais open={open} redesSociais={user.userRedesSociais} />
       </div>
     </div>
   );

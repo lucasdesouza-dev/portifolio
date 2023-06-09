@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className=" scroll-smooth w-full h-full flex flex-col overflow-auto">
+    <main className=" dark:bg-[#10101a] dark:text-white scroll-smooth w-full h-full flex flex-col overflow-auto">
       <Suspense fallback={<Loading />}>
         <HomeUser
           name={user.name}
