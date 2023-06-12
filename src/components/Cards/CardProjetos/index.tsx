@@ -13,10 +13,11 @@ const user = {
 interface Props {
   titulo: string;
   descricao: string;
-  tecnologias?: { titulo: string; icon: ReactNode }[];
+  tecnologias?: { titulo: string; icon: ReactNode }[] | undefined;
   urlGit: string;
   urlDemo: string;
   referencias?: { url: string; titulo: string };
+  image: any;
 }
 export default function CardProjetos({
   titulo,
@@ -25,14 +26,15 @@ export default function CardProjetos({
   urlGit,
   urlDemo,
   referencias,
+  image,
 }: Props) {
   return (
-    <div className="flex flex-col p-10 w-[60rem] h-full max-h-[40rem] items-center justify-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <div className="flex flex-col p-10 w-[60rem] h-full max-h-[40rem] items-center justify-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-[#10101a] dark:bg-[#10101a] dark:hover:bg-gray-700">
       <Image
-        width={200}
+        width={300}
         height={200}
         className="object-cover max-w-lg cursor-move rounded-t-lg  h-full w-full rounded-xl "
-        src={moviesLibGif}
+        src={image}
         alt=""
       />
       <div className="flex flex-col w-1/2 h-full justify-around p-4 leading-normal">

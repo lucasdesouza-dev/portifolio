@@ -1,10 +1,19 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import moviesLibGif from "../../../public/Movies-Lib.gif";
+import Gtr6 from "../../../public/GTR6.gif";
+import SecretWordGif from "../../../public/SecretWord.gif";
+import Calculadora from "../../../public/calculadora.gif";
+import BarbeariaAluraGif from "../../../public/BarbeariaAlura.gif";
+
 import CardProjetos from "../Cards/CardProjetos";
 import {
+  SiCreatereactapp,
   SiCss3,
   SiGraphql,
+  SiHtml5,
+  SiJavascript,
   SiReact,
   SiTypescript,
   SiVite,
@@ -27,30 +36,72 @@ const cards = [
       { titulo: "Typescript", icon: <SiTypescript /> },
     ],
     titulo: "MoviesLib",
+    image: moviesLibGif,
+  },
+  // {
+  //   urlGit: "https://github.com/lucasdesouza-dev/Projeto-ignite-Lab",
+  //   urlDemo:
+  //     "https://projeto-ignite-lab-git-main-lucashenriquesouza.vercel.app",
+  //   descricao:
+  //     "Projeto onde desenvolvo uma plataforma de eventos  junto com ignite lab da rocketseat implementandoas tecnologias abaixo !",
+  //   tecnologias: [
+  //     { titulo: "React.js", icon: <SiReact /> },
+  //     { titulo: "Vite.js", icon: <SiVite /> },
+  //     { titulo: "Css3", icon: <SiCss3 /> },
+  //     { titulo: "Typescript", icon: <SiTypescript /> },
+  //     { titulo: "Graphql", icon: <SiGraphql /> },
+  //   ],
+  //   referencias: {
+  //     url: "https://www.rocketseat.com.br/ignite",
+  //     titulo: "Ignite-Lab Rocketseat",
+  //   },
+  //   titulo: "Ignite-Lab",
+  // },
+  {
+    urlGit: "https://github.com/lucasdesouza-dev/Barbearia-Alura-Lucas",
+    urlDemo: "https://lucasdesouza-dev.github.io/Barbearia-Alura-Lucas/",
+    descricao:
+      "Aplicaçao de uma Barbearia   contruida no curso de Front-End Da Alura",
+    tecnologias: [
+      { titulo: "HTML5", icon: <SiHtml5 /> },
+      { titulo: "Css3", icon: <SiCss3 /> },
+      { titulo: "Javascript", icon: <SiJavascript /> },
+      ,
+    ],
+    titulo: "Barbearia Alura ",
+    image: BarbeariaAluraGif,
   },
   {
-    urlGit: "https://github.com/lucasdesouza-dev/Projeto-ignite-Lab",
-    urlDemo:
-      "https://projeto-ignite-lab-git-main-lucashenriquesouza.vercel.app",
+    urlGit: "https://github.com/lucasdesouza-dev/secretword",
+    urlDemo: "https://lucasdesouza-dev.github.io/secretword/",
     descricao:
-      "Projeto onde desenvolvo uma plataforma de eventos  junto com ignite lab da rocketseat implementandoas tecnologias abaixo !",
+      "Projeto desenvolvido no curso React.JS do 0 a Maestria, ministrado pelo Matheus Bathisti , que consiste em adivinhas a palavra escondida com  a dica e limite de erros!",
     tecnologias: [
       { titulo: "React.js", icon: <SiReact /> },
-      { titulo: "Vite.js", icon: <SiVite /> },
+      { titulo: "Create React App", icon: <SiCreatereactapp /> },
       { titulo: "Css3", icon: <SiCss3 /> },
-      { titulo: "Typescript", icon: <SiTypescript /> },
-      { titulo: "Graphql", icon: <SiGraphql /> },
     ],
-    referencias: {
-      url: "https://www.rocketseat.com.br/ignite",
-      titulo: "Ignite-Lab Rocketseat",
-    },
-    titulo: "Ignite-Lab",
+    titulo: "Secret Word",
+    image: SecretWordGif,
+  },
+  {
+    urlGit: "https://github.com/lucasdesouza-dev/r6_times-lucas",
+    urlDemo: "https://lucasdesouza-dev.github.io/r6_times-lucas/",
+    descricao:
+      "Projeto no intuito de gerar times Com RRMS proximos para equiparar times e jogar com os amigos na ranquiada, deixando as partidas mais divertidas e competitivas",
+    tecnologias: [
+      { titulo: "HTML5", icon: <SiHtml5 /> },
+      { titulo: "Css3", icon: <SiCss3 /> },
+      { titulo: "Javascript.JS", icon: <SiJavascript /> },
+    ],
+    titulo: "GTR6- Gerador de Times Raimbow Six Seage",
+    image: Gtr6,
   },
   {
     urlGit: "https://github.com/lucasdesouza-dev/Calculadora",
-    urlDemo: "",
-    descricao: "Simulando uma calculadora com designer da Apple",
+    urlDemo: "https://lucasdesouza-dev.github.io/Calculadora/",
+    descricao:
+      "Calculadora construida com o layout da apple , calculadora simples ams funcional",
     tecnologias: [
       { titulo: "React.js", icon: <SiReact /> },
       { titulo: "Vite.js", icon: <SiVite /> },
@@ -58,19 +109,8 @@ const cards = [
       { titulo: "Typescript", icon: <SiTypescript /> },
       ,
     ],
-    titulo: "Calculadora ",
-  },
-  {
-    urlGit: "",
-    urlDemo: "",
-    descricao: "loresldjhaskjfbk kjhdkja kjahdkja hdkjah kjdhkjhkjhdkjha jkh",
-    tecnologias: [
-      { titulo: "React.js", icon: <SiReact /> },
-      { titulo: "Vite.js", icon: <SiVite /> },
-      { titulo: "Css3", icon: <SiCss3 /> },
-      { titulo: "Typescript", icon: <SiTypescript /> },
-    ],
-    titulo: "Mergulhe no JavaScript com TypeScript",
+    titulo: "Calculadora Apple React.Js",
+    image: Calculadora,
   },
 ];
 
@@ -95,7 +135,8 @@ export default function Carousel() {
           dragConstraints={{ right: 0, left: -width }}
         >
           {cards.map((item, index) => {
-            const { urlGit, urlDemo, descricao, titulo, tecnologias } = item;
+            const { image, urlGit, urlDemo, descricao, titulo, tecnologias } =
+              item;
             return (
               <motion.div key={index} className="w-full">
                 <CardProjetos
@@ -105,6 +146,7 @@ export default function Carousel() {
                   descricao={descricao}
                   tecnologias={tecnologias}
                   referencias={item.referencias}
+                  image={image}
                 />
               </motion.div>
             );
