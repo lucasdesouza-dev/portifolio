@@ -13,7 +13,7 @@ const user = {
 interface Props {
   titulo: string;
   descricao: string;
-  tecnologias?: { titulo: string; icon: ReactNode }[] | undefined;
+  tecnologias?: any[] | undefined;
   urlGit: string;
   urlDemo: string;
   referencias?: { url: string; titulo: string };
