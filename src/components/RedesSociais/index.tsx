@@ -24,7 +24,7 @@ export default function RedesSociais({ open, redesSociais }: Props) {
           key={item.name}
           className={classNames(
             open ? " justify-between " : "mb-2",
-            "hover:text-red-600 flex w-full  dark:text-white text-xl text-gray-900 justify-center"
+            "hover:text-[#dc2626] flex w-full  dark:text-white text-xl text-gray-900 justify-center"
           )}
         >
           <a href={item.href} className="cursor-pointer ">

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Button from "../Button";
 import { motion } from "framer-motion";
-
+import profilePic from '/public/perfil.png'
 interface User {
   name: string;
   imageUrl: string;
@@ -40,15 +40,15 @@ export default function HomeUser({ name, imageUrl, email }: User) {
           </Button>
         </div>
       </div>
-      <div className="absolute top-[-10rem] right-[-12rem] w-[60rem] h-[60rem] rounded-full bg-[#1F2326] opacity-30"></div>
+      <div className="absolute  top-[-10rem] right-[-12rem] w-[60rem] h-[60rem] rounded-full bg-[#1F2326] opacity-30"></div>
       <motion.div
-        animate={{ y: [-50, 0, 50, 0, -50], x: [0, 100, 0] }}
+        animate={{ y: [-50, 0, 50, 0, -50], x: [0,50, 120, 0] }}
         transition={{ ease: "linear", duration: 3, repeat: Infinity }}
         className="  w-1/2 flex justify-center items-center"
       >
         <Image
-          className="rounded-full border-4 border-white z-10"
-          src={imageUrl}
+          className=" bg-[#dc2626] rounded-full h-[500px] object-contain border-4 border-white z-10"
+          src={profilePic}
           width={500}
           height={500}
           alt="Picture of the author"

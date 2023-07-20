@@ -1,4 +1,7 @@
 import CardAbout from "../Cards/CardAbout";
+import Sobre1 from '/public/sobre1.png'
+import Sobre2 from '/public/sobre2.png'
+import perfil from "/public/perfil.png"
 const user = {
   name: "Lucas Souza",
   email: "luca.s.ouza@hotmail.com",
@@ -14,21 +17,21 @@ export default function About() {
       <div className="relative w-1/2 flex flex-col  items-center">
         <div className="absolute right-3/4 top-[42%]  ml-auto m-2  w-8 h-8 rounded-full bg-red-600"></div>
         <div className="grid grid-cols-2 w-1/2 gap-2">
-          <CardAbout mt={2} w={230} h={250} src={user.imageUrl} />
+          <CardAbout mt={2} w={230} h={250} src={perfil} bg="#dc2626" />
           <div>
             <div className=" m-2  w-4 h-4 rounded-full bg-red-600"></div>
-            <CardAbout w={200} h={200} src={user.imageUrl} />
+            <CardAbout w={200} h={200}  src={user.imageUrl} bg="#dc2626"/>
           </div>
 
           <div>
-            <CardAbout w={200} h={200} src={user.imageUrl} />
+            <CardAbout  w={200} h={200} src={Sobre1} bg="#dc2626" />
             <div className=" ml-auto m-2  w-4 h-4 rounded-full bg-red-600"></div>
           </div>
-          <CardAbout mt={5} w={230} h={250} src={user.imageUrl} />
+          <CardAbout  w={200} h={250} src={Sobre2} bg="#dc2626" />
         </div>
       </div>
       <div className="w-1/2 font-semibold p-4">
-        <h1 className=" text-2xl border-b-2 w-1/4 border-red-600 text-red-600 ">
+        <h1 className=" text-2xl border-b-2 w-1/4 border-[#dc2626] text-[#dc2626] ">
           Sobre Mim
         </h1>
 

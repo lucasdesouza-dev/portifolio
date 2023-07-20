@@ -22,7 +22,7 @@ export default function CardEducation({
         className="block max-w-xl h-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#1F2326] dark:border-[#1F2326] dark:hover:bg-[#333a3f] "
       >
         {periodo && (
-          <div className="text-center text-white mt-2 w-1/4 rounded-e-lg bg-red-600">
+          <div className="text-center text-white mt-2 w-1/4 rounded-e-lg bg-[#dc2626]">
             <p>
               {periodo.inicial}-{periodo.termino}
             </p>

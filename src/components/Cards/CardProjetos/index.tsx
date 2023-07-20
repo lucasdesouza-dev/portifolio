@@ -57,7 +57,7 @@ export default function CardProjetos({
             return (
               <div
                 key={i}
-                className="p-2 rounded-xl border border-red-600 flex gap-2 justify-center items-center"
+                className="p-2 rounded-xl border border-[#dc2626] flex gap-2 justify-center items-center"
               >
                 {item.icon}
                 <p>{item.titulo}</p>
@@ -68,14 +68,14 @@ export default function CardProjetos({
         <div className="flex justify-around">
           <a
             href={urlGit}
-            className="cursor-pointer p-2 flex gap-4 justify-center border border-red-600 rounded-xl"
+            className="cursor-pointer p-2 flex gap-4 justify-center border border-[#dc2626] rounded-xl"
           >
             <p>Github</p>
             <BsGithub size={25} />
           </a>
           <a
             href={urlDemo}
-            className="cursor-pointer p-2 flex gap-4 justify-center border border-red-600 rounded-xl"
+            className="cursor-pointer p-2 flex gap-4 justify-center border border-[#dc2626] rounded-xl"
           >
             <p>Demo</p>
             <BsFillArrowUpRightSquareFill size={25} />

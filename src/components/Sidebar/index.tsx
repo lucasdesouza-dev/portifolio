@@ -60,7 +60,7 @@ const Sidebar = () => {
             transform: !open ? " translateX(4rem)" : "none",
             overflow: !open ? "hidden" : "",
           }}
-          className="  absolute top-[-70px] left-[-10px] bg-red-600 w-60 h-60 rounded-full"
+          className="  absolute top-[-70px] left-[-10px] bg-[#dc2626] w-60 h-60 rounded-full"
         ></div>
 
         <div className="z-10 h-1/2 flex flex-col justify-between">
@@ -185,7 +185,7 @@ const Sidebar = () => {
                         href={menu?.link}
                         className={classNames(
                           menu?.margin && "mt-5",
-                          "group hover:text-red-600  flex items-center gap-3.5  rounded-md p-2 text-sm font-medium "
+                          "group hover:text-[#dc2626] flex items-center gap-3.5  rounded-md p-2 text-sm font-medium "
                         )}
                       >
                         <div className="delay-300 text-xl duration-500">
