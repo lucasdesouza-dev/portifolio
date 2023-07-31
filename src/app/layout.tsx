@@ -22,7 +22,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={classNames(toggle ? "dark" : "")}>
-      <body className={`${inter.className}  w-screen h-screen flex`}>
+      <body className={`${inter.className}  w-screen h-screen flex sm:flex-col`}>
         <DarkMode valorToggle={valorToggle} size={35} />
         <Sidebar />
         {children}
