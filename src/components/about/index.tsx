@@ -1,6 +1,8 @@
 import CardAbout from "../Cards/CardAbout";
 import Sobre1 from '/public/sobre1.png'
 import Sobre2 from '/public/sobre2.png'
+import Sobre3 from '/public/sobre3.png'
+
 import perfil from "/public/perfil.png"
 const user = {
   name: "Lucas Souza",
@@ -20,7 +22,7 @@ export default function About() {
           <CardAbout mt={2} w={230} h={250} src={perfil} bg="#dc2626" />
           <div>
             <div className=" m-2  w-4 h-4 rounded-full bg-red-600"></div>
-            <CardAbout w={200} h={200}  src={user.imageUrl} bg="#dc2626"/>
+            <CardAbout w={200} h={200}  src={Sobre3} bg="#dc2626"/>
           </div>
 
           <div>
