@@ -12,9 +12,9 @@ export default function HomeUser({ name, imageUrl, email }: User) {
   return (
     <section
       id="home"
-      className="relative w-full h-full min-h-screen flex overflow-hidden "
+      className="  relative w-full h-full min-h-screen flex overflow-hidden "
     >
-      <div className="font-semibold w-1/2 p-14 flex flex-col justify-center">
+      <div className=" font-semibold w-1/2 p-14 flex flex-col justify-center">
         <h1 className="my-4 text-2xl">Olá, bem vindo ao meu portifólio! </h1>
         <div className="h-2/5 flex flex-col justify-between">
           <h2 className="text-xl my-2">

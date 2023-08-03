@@ -31,6 +31,17 @@ const user = {
   ],
   educacao: [
     {
+      titulo: "Cursos Alura - Front-end",
+      href: "https://cursos.alura.com.br/user/lucasdesouza-dev/fullCertificate/2ba33888eaab081a6474e29142ec40b4",
+      descricao:
+        "Cursos profissionalizantes concluidos em uma das maiores plataformas digitais de cursos de programação, Front-end, Back-end,  Segurança de software com OWASP entre outros.",
+      periodo: {
+        inicial: "2019",
+        termino: "2023",
+      },
+
+    },
+    {
       titulo: "Análise e Desenvolvimento de Sistemas",
       descricao:
         "Análise e Desenvolvimento de Sistemas é a área da tecnologia responsável por projetar, desenvolver e implementar softwares para atender as necessidades das empresas, utilizando técnicas de programação e gestão de projetos para criar soluções inovadoras e eficientes.",
@@ -45,10 +56,23 @@ const user = {
       descricao:
         "Cursos profissionalizantes concluidos em uma das maiores plataformas digitais de cursos de programação, Front-end, Back-end,  Segurança de software com OWASP entre outros.",
       periodo: {
-        inicial: "2021",
+        inicial: "2022",
         termino: "2023",
       },
+
     },
+    {
+      titulo: "Cursos Alura - Programa Oracle Next Education F2 T3 ",
+      href: "https://cursos.alura.com.br/user/lucasdesouza-dev/program/certificate",
+      descricao:
+        "Cursos  onde pude  aperfeiçoar minhas hábilidades front-end e desenvolvimento pessoal e aidna me aprofundar na linguagem java.",
+      periodo: {
+        inicial: "2022",
+        termino: "2023",
+      },
+
+    },
+
   ],
 };
 export default user;
