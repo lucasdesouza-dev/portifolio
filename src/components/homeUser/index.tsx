@@ -12,25 +12,25 @@ export default function HomeUser({ name, imageUrl, email }: User) {
   return (
     <section
       id="home"
-      className="  relative w-full h-full min-h-screen flex overflow-hidden "
+      className="   w-full h-full min-h-screen flex flex-col  justify-evenly"
     >
-      <div className=" font-semibold w-1/2 p-14 flex flex-col justify-center">
-        <h1 className="my-4 text-2xl">Olá, bem vindo ao meu portifólio! </h1>
-        <div className="h-2/5 flex flex-col justify-between">
+      <div className=" font-semibold  p-2 flex flex-col  ">
+        <h1 className="my-4 text-xl">Olá, bem vindo ao meu portifólio! </h1>
+        <div className=" flex flex-col justify-between ">
           <h2 className="text-xl my-2">
             Meu nome é<br />
-            <span className="font-bold text-7xl">{name}</span> <br /> e sou um
+            <span className="font-bold text-5xl">{name}</span> <br /> sou
             desenvolvedor <strong>FULL STACK</strong>
           </h2>
           <p>
-            Especialista em <strong>FRONT END</strong> Next.js e React.js.
+            Especialista em <strong>FRONT END</strong> <br/> Next.js e React.js.
           </p>
 
           <p>
             Eu projeto e desenvolvo serviços para clientes de todos os tamanhos,
             <br />
             especializado na criação de sites elegantes e modernos, serviços da
-            web e lojas online.
+            web.
           </p>
           <Button
             href="
@@ -40,8 +40,7 @@ export default function HomeUser({ name, imageUrl, email }: User) {
           </Button>
         </div>
       </div>
-      <div className="absolute  top-[-10rem] right-[-12rem] w-[60rem] h-[60rem] rounded-full bg-[#1F2326] opacity-30"></div>
-      <motion.div
+      {/* <motion.div
         animate={{ y: [-50, 0, 50, 0, -50], x: [0,50, 120, 0] }}
         transition={{ ease: "linear", duration: 3, repeat: Infinity }}
         className="  w-1/2 flex justify-center items-center"
@@ -53,7 +52,17 @@ export default function HomeUser({ name, imageUrl, email }: User) {
           height={500}
           alt="Picture of the author"
         />
-      </motion.div>
+      </motion.div> */}
+    <div className="w-full flex items-center justify-center overflow-hidden">
+      <Image
+          className=" bg-[#dc2626] rounded-full h-[360px] object-contain border-4 border-white "
+          src={profilePic}
+          width={360}
+          height={300}
+          alt="Picture of the author"
+        />
+        </div>
+        
     </section>
   );
 }

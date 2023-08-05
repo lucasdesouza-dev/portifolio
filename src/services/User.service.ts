@@ -61,17 +61,17 @@ const user = {
       },
 
     },
-    {
-      titulo: "Cursos Alura - Programa Oracle Next Education F2 T3 ",
-      href: "https://cursos.alura.com.br/user/lucasdesouza-dev/program/certificate",
-      descricao:
-        "Cursos  onde pude  aperfeiçoar minhas hábilidades front-end e desenvolvimento pessoal e aidna me aprofundar na linguagem java.",
-      periodo: {
-        inicial: "2022",
-        termino: "2023",
-      },
+    // {
+    //   titulo: "Cursos Alura - Programa Oracle Next Education F2 T3 ",
+    //   href: "https://cursos.alura.com.br/user/lucasdesouza-dev/program/certificate",
+    //   descricao:
+    //     "Cursos  onde pude  aperfeiçoar minhas hábilidades front-end e desenvolvimento pessoal e aidna me aprofundar na linguagem java.",
+    //   periodo: {
+    //     inicial: "2022",
+    //     termino: "2023",
+    //   },
 
-    },
+    // },
 
   ],
 };

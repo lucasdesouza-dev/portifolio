@@ -21,10 +21,10 @@ export default function Home() {
           email={user.email}
           imageUrl={user.imageUrl}
         />
-        <About />
+       <About />
         <Skills />
-        <Projetos />
-        <Footer />
+         <Projetos />
+       {/*  <Footer /> */}
       </Suspense>
     </main>
   );

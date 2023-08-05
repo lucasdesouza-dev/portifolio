@@ -42,13 +42,13 @@ const menus = [
 ];
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(null);
   const [showName, setShowName] = useState(null);
   return (
     <div className=" sticky   max-w-[16rem] sm:w-screen ">
       <div
-        className={`bg-[#f7f7ff]   sm:w-screen sm:h-56  ${
+        className={`bg-[#f7f7ff]     ${
           open ? "w-64" : "w-16"
         } dark:bg-[#1F2326] dark:text-white border-r dark:border-r-white h-full relative overflow-hidden flex flex-col justify-between text-gray-900 duration-500`}
       >
@@ -68,7 +68,7 @@ const Sidebar = () => {
             <div
               className={classNames(
                 !open ? "justify-center" : "justify-end",
-                "z-10 w-full flex py-3 sm:invisible "
+                "z-10 w-full flex py-3 invisible "
               )}
             >
               <HiMenuAlt3
