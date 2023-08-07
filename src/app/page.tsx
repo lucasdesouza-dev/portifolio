@@ -21,8 +21,8 @@ export default function Home() {
           email={user.email}
           imageUrl={user.imageUrl}
         />
-        <About />
-        <Skills />
+       <About />
+       <Skills />
         <Projetos />
         <Footer />
       </Suspense>

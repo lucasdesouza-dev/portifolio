@@ -22,8 +22,8 @@ export default function DarkMode({ size, valorToggle }: Props) {
   return (
     <div
       className={classNames(
-        toggle ? "text-yellow-400" : "",
-        "cursor-pointer absolute z-10 top-4 right-8 text-white flex justify-center items-center w-14 h-14 rounded-full bg-[#1F2326] "
+        toggle ? "text-yellow-400 bg-white" : "",
+        "cursor-pointer absolute z-10 top-4 left-1 text-white flex justify-center items-center w-12 h-12 rounded-full bg-[#1F2326] "
       )}
     >
       <div

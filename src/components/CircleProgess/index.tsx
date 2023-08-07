@@ -11,7 +11,7 @@ interface Props {
 }
 export default function CircleProgress({ titulo, valor, icon }: Props) {
   return (
-    <div className="w-36">
+    <div className="w-32">
       <CircularProgressbarWithChildren
         value={valor}
         strokeWidth={6}
@@ -23,7 +23,7 @@ export default function CircleProgress({ titulo, valor, icon }: Props) {
       >
         {icon}
         <div>
-          <p className=" font-bold">{titulo}</p>
+          <p className="text-sm font-bold">{titulo}</p>
         </div>
       </CircularProgressbarWithChildren>
     </div>

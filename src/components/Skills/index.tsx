@@ -128,9 +128,9 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className=" flex items-center w-full h-full min-h-screen"
+      className=" flex  flex-col items-center  "
     >
-      <div className="w-1/2 flex flex-col  items-center justify-center">
+      <div className=" flex flex-col  items-center justify-center p-4">
         <div className="flex flex-wrap gap-2 justify-center">
           {user.educacao.map((item: any, i: number) => {
             return (
@@ -146,12 +146,12 @@ export default function Skills() {
           })}
         </div>
       </div>
-      <div className="w-1/2 font-semibold p-4">
-        <h1 className="text-2xl border-b-2 w-1/4 border-red-600 text-red-600 ">
+      <div className=" font-semibold p-4">
+        <h1 className="text-2xl border-b-2 w-2/4 border-red-600 text-red-600 ">
           Minhas Skills
         </h1>
 
-        <div className="flex flex-wrap gap-4 p-4 ">
+        <div className="flex flex-wrap gap-4 p-2 mt-2 ">
           {skillsFront.map((item, i) => {
             return (
               <div key={i}>

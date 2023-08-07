@@ -29,7 +29,7 @@ export default function CardProjetos({
   image,
 }: Props) {
   return (
-    <div className="flex flex-col p-10 w-[60rem] h-full max-h-[40rem] items-center justify-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-[#10101a] dark:bg-[#10101a] dark:hover:bg-gray-700">
+    <div className="flex flex-col p-2 my-2 w-full h-full  items-center justify-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-[#10101a] dark:bg-[#10101a] dark:hover:bg-gray-700">
       <Image
         width={300}
         height={200}
@@ -37,7 +37,7 @@ export default function CardProjetos({
         src={image}
         alt=""
       />
-      <div className="flex flex-col w-1/2 h-full justify-around p-4 leading-normal">
+      <div className="flex flex-col h-full justify-around p-4 leading-normal">
         <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {titulo}
         </h1>
@@ -59,7 +59,8 @@ export default function CardProjetos({
                 key={i}
                 className="p-2 rounded-xl border border-[#dc2626] flex gap-2 justify-center items-center"
               >
-                {item.icon}
+               
+                {React.createElement(item.icon)}
                 <p>{item.titulo}</p>
               </div>
             );

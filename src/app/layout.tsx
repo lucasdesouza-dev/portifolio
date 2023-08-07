@@ -17,13 +17,13 @@ export default function RootLayout({
 
   function valorToggle(valor: boolean) {
     setTogglePai(!valor);
-    console.log("pai", valor);
+    
   }
 
   return (
     <html lang="en" className={classNames(toggle ? "dark" : "")}>
       <body className={`${inter.className}  w-screen h-screen flex sm:flex-col`}>
-        <DarkMode valorToggle={valorToggle} size={35} />
+        <DarkMode valorToggle={valorToggle} size={32} />
         <Sidebar />
         {children}
       </body>

@@ -14,11 +14,10 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className=" flex items-center w-full h-full min-h-screen bg-gray-200 dark:bg-[#1F2326]"
+      className=" flex flex-col items-center w-full  bg-gray-200 dark:bg-[#1F2326]"
     >
-      <div className="relative w-1/2 flex flex-col  items-center">
-        <div className="absolute right-3/4 top-[42%]  ml-auto m-2  w-8 h-8 rounded-full bg-red-600"></div>
-        <div className="grid grid-cols-2 w-1/2 gap-2">
+      <div className="relative flex flex-col  items-center p-4">
+        <div className="grid grid-cols-2  gap-2">
           <CardAbout mt={2} w={230} h={250} src={perfil} bg="#dc2626" />
           <div>
             <div className=" m-2  w-4 h-4 rounded-full bg-red-600"></div>
@@ -32,8 +31,8 @@ export default function About() {
           <CardAbout  w={200} h={250} src={Sobre2} bg="#dc2626" />
         </div>
       </div>
-      <div className="w-1/2 font-semibold p-4">
-        <h1 className=" text-2xl border-b-2 w-1/4 border-[#dc2626] text-[#dc2626] ">
+      <div className="font-semibold p-4">
+        <h1 className=" text-2xl border-b-2  w-32 border-[#dc2626] text-[#dc2626] ">
           Sobre Mim
         </h1>
 
@@ -41,7 +40,7 @@ export default function About() {
           Um Olhar Abrangente sobre a Experiência em Desenvolvimento Front-End e
           Back-End!
         </p>
-        <p className=" m-2">
+        <p className=" ">
           Olá! Meu nome é Lucas Souza e sou um desenvolvedor web
           <strong className="ml-2">FULL STACK</strong> com experiência em
           front-end e back-end. Ao longo dos últimos três anos, tenho me
@@ -51,7 +50,7 @@ export default function About() {
           tecnologias que utilizei ao longo do caminho.
         </p>
 
-        <p className=" m-2">
+        <p className=" ">
           Durante os últimos três anos, meu foco principal tem sido o
           desenvolvimento front-end. Tive a oportunidade de trabalhar com várias
           tecnologias e frameworks populares, incluindo{" "}
@@ -67,7 +66,7 @@ export default function About() {
           pré-definidas, o que me permitiu criar interfaces elegantes e
           responsivas de maneira eficiente.
         </p>
-        <p className=" m-2">
+        <p className=" ">
           Um Novo Capítulo de Aprendizado e Crescimento Há aproximadamente um
           ano, decidi expandir minhas habilidades além do front-end e me
           aventurar no desenvolvimento back-end. Durante esse período, explorei
@@ -88,7 +87,7 @@ export default function About() {
           dados e consultas me permitiu construir sistemas robustos e
           eficientes.
         </p>
-        <p className=" m-2">
+        <p className=" ">
           Olhando para o Futuro Estou entusiasmado com a perspectiva de
           continuar aprimorando minhas habilidades em desenvolvimento web, tanto
           no front-end quanto no back-end. Pretendo explorar ainda mais as

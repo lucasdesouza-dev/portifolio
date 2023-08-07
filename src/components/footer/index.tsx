@@ -5,7 +5,7 @@ import Versao from "../Versao";
 
 export default function Footer() {
   return (
-    <div className="relative flex flex-col justify-center items-center dark:bg-[#10101a] w-full min-h-[30vh] ">
+    <div className=" flex flex-col p-6 justify-center items-center dark:bg-[#10101a] w-full  ">
       <p className="text-xl">
         Portifolio desenvolvido por{" "}
         <strong>
@@ -19,7 +19,7 @@ export default function Footer() {
         <p>Entre em contato por uma rede para mais informações </p>
       </div>
 
-      <div className="w-36">
+      <div className=" w-full">
         <RedesSociais open={true} redesSociais={user.userRedesSociais} />
       </div>
 
