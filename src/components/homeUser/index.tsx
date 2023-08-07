@@ -12,9 +12,9 @@ export default function HomeUser({ name, imageUrl, email }: User) {
   return (
     <section
       id="home"
-      className="   w-full h-full min-h-screen flex flex-col  justify-evenly"
+      className="   w-full h-full min-h-screen flex flex-col lg:flex-row  justify-evenly"
     >
-      <div className=" font-semibold  p-2 flex flex-col  ">
+      <div className=" font-semibold  p-2 flex flex-col  lg:justify-center lg:p-4 lg:w-full">
         <h1 className="my-4 text-xl">Olá, bem vindo ao meu portifólio! </h1>
         <div className=" flex flex-col justify-between ">
           <h2 className="text-xl my-2">

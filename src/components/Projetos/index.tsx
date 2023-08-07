@@ -14,7 +14,7 @@ export default function Projetos() {
           Meus Projetos
         </h1>
       </div>
-      <div className="invisible lg:visible">
+      <div className="hidden lg:block">
         <Carousel  />
       </div>
       <div className="p-2">

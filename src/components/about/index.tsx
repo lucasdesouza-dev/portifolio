@@ -14,9 +14,9 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className=" flex flex-col items-center w-full  bg-gray-200 dark:bg-[#1F2326]"
+      className=" flex flex-col lg:flex-row items-center w-full  bg-gray-200 dark:bg-[#1F2326]"
     >
-      <div className="relative flex flex-col  items-center p-4">
+      <div className="relative flex flex-col  items-center p-4 lg:w-4/5">
         <div className="grid grid-cols-2  gap-2">
           <CardAbout mt={2} w={230} h={250} src={perfil} bg="#dc2626" />
           <div>
@@ -31,7 +31,7 @@ export default function About() {
           <CardAbout  w={200} h={250} src={Sobre2} bg="#dc2626" />
         </div>
       </div>
-      <div className="font-semibold p-4">
+      <div className="font-semibold p-4  lg:w-full">
         <h1 className=" text-2xl border-b-2  w-32 border-[#dc2626] text-[#dc2626] ">
           Sobre Mim
         </h1>
