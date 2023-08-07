@@ -128,9 +128,14 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className=" flex  flex-col items-center  "
-    >
+      className=" flex  flex-col items-center  lg:flex-row"
+      
+    > 
       <div className=" flex flex-col  items-center justify-center p-4">
+      <div className="w-full font-semibold py-2 ">
+      <h1 className="text-2xl border-b-2 w-1/5 border-red-600 text-red-600 ">
+          Educação
+        </h1></div>
         <div className="flex flex-wrap gap-2 justify-center">
           {user.educacao.map((item: any, i: number) => {
             return (

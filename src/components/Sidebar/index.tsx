@@ -46,7 +46,7 @@ const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(null);
   const [showName, setShowName] = useState(null);
   return (
-    <div className=" sticky   max-w-[16rem] sm:w-screen ">
+    <div className=" sticky   max-w-[16rem]  ">
       <div
         className={`bg-[#f7f7ff]     ${
           open ? "w-64" : "w-16"
@@ -60,15 +60,15 @@ const Sidebar = () => {
             transform: !open ? " translateX(4rem)" : "none",
             overflow: !open ? "hidden" : "",
           }}
-          className=" sm:invisible   absolute top-[-70px] left-[-10px] bg-[#dc2626] w-60 h-60 rounded-full"
+          className=" invisible md:visible   absolute top-[-70px] left-[-10px] bg-[#dc2626] w-60 h-60 rounded-full"
         ></div>
 
-        <div className="z-10 h-1/2 flex flex-col justify-between sm:h-[74%] sm:items-center">
+        <div className="z-10 h-1/2 flex flex-col justify-between  ">
           <div className=" h-1/2  flex  flex-col justify-around items-center rounded">
             <div
               className={classNames(
                 !open ? "justify-center" : "justify-end",
-                "z-10 w-full flex py-3 invisible "
+                "z-10 w-full flex py-3 invisible  md:visible"
               )}
             >
               <HiMenuAlt3
@@ -101,7 +101,7 @@ const Sidebar = () => {
               )}
             </div>
           </div>
-          <div className="relative px-4 mt-4 flex flex-col gap-4 sm:flex-row sm:w-full sm:justify-between">
+          <div className="relative px-4 mt-4 flex flex-col gap-4  ">
             {menus?.map((menu: any, i: any) => {
               const createSubMenu = !!menu.subMenu;
 

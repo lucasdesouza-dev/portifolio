@@ -19,7 +19,7 @@ export default function Footer() {
         <p>Entre em contato por uma rede para mais informações </p>
       </div>
 
-      <div className=" w-full">
+      <div className=" w-full max-w-sm">
         <RedesSociais open={true} redesSociais={user.userRedesSociais} />
       </div>
 

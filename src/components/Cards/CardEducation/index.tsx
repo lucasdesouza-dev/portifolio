@@ -16,7 +16,7 @@ export default function CardEducation({
   periodo,
 }: Props) {
   return (
-    <div className="w-full ">
+    <div className="w-full md:max-w-3xl ">
       <a
         href={href}
         className="block  h-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-[#1F2326] dark:border-[#1F2326] dark:hover:bg-[#333a3f] "
