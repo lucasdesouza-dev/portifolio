@@ -12,7 +12,7 @@ export default function RedesSociais({ open, redesSociais }: Props) {
         transition: "2s",
         transform: open ? " translate(1rem)" : "none",
       }}
-      className={classNames(open ? " flex justify-center " : " block", "m-4 sm:w-full ")}
+      className={classNames(open ? " flex justify-center " : " block", "m-4 mb-10 sm:w-full ")}
     >
       {redesSociais.map((item) => (
         <div

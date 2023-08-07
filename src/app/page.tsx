@@ -22,9 +22,9 @@ export default function Home() {
           imageUrl={user.imageUrl}
         />
        <About />
-        <Skills />
-         <Projetos />
-       {/*  <Footer /> */}
+       <Skills />
+        <Projetos />
+        <Footer />
       </Suspense>
     </main>
   );
