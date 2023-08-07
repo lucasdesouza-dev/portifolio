@@ -7,7 +7,7 @@ export default function Projetos() {
   return (
     <section
       id="projetos"
-      className="bg-gray-200 dark:bg-[#1F2326] flex flex-col  lg:items-center lg:justify-center w-full min-h-screen "
+      className="bg-gray-200 dark:bg-[#1F2326] flex flex-col  w-full "
     >
       <div className="px-2 w-full font-semibold  m-4">
         <h1 className="text-2xl  border-b-2 w-3/5 border-red-600 text-red-600 ">
