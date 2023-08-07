@@ -126,11 +126,11 @@ export default function Carousel() {
     <motion.div className="w-full px-10 display flex justify-center items-center">
       <motion.div
         ref={carousel}
-        className="cursor-grab overflow-hidden w-full "
+        className="cursor-grab overflow-hidden w-full  "
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
-          className="flex  gap-6 "
+          className="flex  gap-6 h-full "
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
         >
