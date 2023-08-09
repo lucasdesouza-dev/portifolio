@@ -12,8 +12,10 @@ export default function HomeUser({ name, imageUrl, email }: User) {
   return (
     <section
       id="home"
-      className="   w-full h-full min-h-screen flex flex-col lg:flex-row  justify-evenly max-w-full"
+      className=" relative overflow-hidden  w-full h-full min-h-screen flex flex-col lg:flex-row  justify-evenly max-w-full"
     >
+    <div className=" hidden lg:block absolute top-[-10rem] right-[-12rem] w-[60rem] h-[60rem] rounded-full bg-black opacity-20"></div>
+
       <div className=" font-semibold  p-2 flex flex-col  lg:justify-center lg:p-4 ">
         <h1 className="my-4 text-xl">Olá, bem vindo ao meu portifólio! </h1>
         <div className=" flex flex-col justify-between ">
