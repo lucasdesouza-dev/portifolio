@@ -6,6 +6,7 @@ import {
   SiHtml5,
   SiJavascript,
   SiReact,
+  SiTailwindcss,
   SiTypescript,
   SiVite,
 } from "react-icons/si";
@@ -15,6 +16,8 @@ import Gtr6 from "../../public/GTR6.gif";
 import SecretWordGif from "../../public/SecretWord.gif";
 import Calculadora from "../../public/calculadora.gif";
 import BarbeariaAluraGif from "../../public/BarbeariaAlura.gif";
+import ValoranteUI from "../../public/ValoranteUI.gif"
+
 const cards = [
   {
     urlGit: "https://github.com/lucasdesouza-dev/The-Movie-App",
@@ -32,6 +35,27 @@ const cards = [
       { titulo: "Typescript", icon: SiTypescript },
     ],
     titulo: "MoviesLib",
+    image: ValoranteUI,
+  }
+  ,
+  {
+    urlGit: "https://github.com/lucasdesouza-dev/ValoranteUI/tree/main",
+    urlDemo: "https://valorante-ui.vercel.app",
+    descricao:
+      "Projeto onde desenvolvo um layout basico dos agentes armas e maaps do jogo Valorant da Riot !",
+    tecnologias: [
+      { titulo: "React.js", icon: SiReact },
+      { titulo: "Vite.js", icon: SiVite },
+      { titulo: "Css3", icon: SiCss3 },
+      { titulo: "Typescript", icon: SiTypescript },
+      { titulo: "Graphql", icon: SiGraphql },
+      { titulo: "Tailwind", icon: SiTailwindcss },
+    ],
+    // referencias: {
+    //   url: "https://www.rocketseat.com.br/ignite",
+    //   titulo: "Ignite-Lab Rocketseat",
+    // },
+    titulo: "ValorantUI",
     image: moviesLibGif,
   },
   // {

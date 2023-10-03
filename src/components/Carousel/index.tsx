@@ -15,6 +15,7 @@ import {
   SiHtml5,
   SiJavascript,
   SiReact,
+  SiTailwindcss,
   SiTypescript,
   SiVite,
 } from "react-icons/si";
@@ -30,42 +31,42 @@ const cards = [
     descricao:
       "Aplicação com intuito de mostrar informações atualizadas de filmes , utizando a api da themoviedb para fornecer informações, ",
     tecnologias: [
-      { titulo: "React.js", icon: SiReact  },
-      { titulo: "Vite.js", icon:SiVite  },
-      { titulo: "Css3", icon: SiCss3  },
-      { titulo: "Typescript", icon: SiTypescript  },
+      { titulo: "React.js", icon: SiReact },
+      { titulo: "Vite.js", icon: SiVite },
+      { titulo: "Css3", icon: SiCss3 },
+      { titulo: "Typescript", icon: SiTypescript },
     ],
     titulo: "MoviesLib",
     image: moviesLibGif,
   },
-  // {
-  //   urlGit: "https://github.com/lucasdesouza-dev/Projeto-ignite-Lab",
-  //   urlDemo:
-  //     "https://projeto-ignite-lab-git-main-lucashenriquesouza.vercel.app",
-  //   descricao:
-  //     "Projeto onde desenvolvo uma plataforma de eventos  junto com ignite lab da rocketseat implementandoas tecnologias abaixo !",
-  //   tecnologias: [
-  //     { titulo: "React.js", icon: <SiReact /> },
-  //     { titulo: "Vite.js", icon: <SiVite /> },
-  //     { titulo: "Css3", icon: <SiCss3 /> },
-  //     { titulo: "Typescript", icon: <SiTypescript /> },
-  //     { titulo: "Graphql", icon: <SiGraphql /> },
-  //   ],
-  //   referencias: {
-  //     url: "https://www.rocketseat.com.br/ignite",
-  //     titulo: "Ignite-Lab Rocketseat",
-  //   },
-  //   titulo: "Ignite-Lab",
-  // },
+  {
+    urlGit: "https://github.com/lucasdesouza-dev/ValoranteUI/tree/main",
+    urlDemo: "https://valorante-ui.vercel.app",
+    descricao:
+      "Projeto onde desenvolvo um layou basico dos agentes armas e maaps do jogo Valorant da Riot !",
+    tecnologias: [
+      { titulo: "React.js", icon: <SiReact /> },
+      { titulo: "Vite.js", icon: <SiVite /> },
+      { titulo: "Css3", icon: <SiCss3 /> },
+      { titulo: "Typescript", icon: <SiTypescript /> },
+      { titulo: "Graphql", icon: <SiGraphql /> },
+      { titulo: "Tailwind", icon: <SiTailwindcss /> },
+    ],
+    referencias: {
+      url: "https://www.rocketseat.com.br/ignite",
+      titulo: "Ignite-Lab Rocketseat",
+    },
+    titulo: "Ignite-Lab",
+  },
   {
     urlGit: "https://github.com/lucasdesouza-dev/Barbearia-Alura-Lucas",
     urlDemo: "https://lucasdesouza-dev.github.io/Barbearia-Alura-Lucas/",
     descricao:
       "Aplicaçao de uma Barbearia   contruida no curso de Front-End Da Alura",
     tecnologias: [
-      { titulo: "HTML5", icon: SiHtml5  },
-      { titulo: "Css3", icon: SiCss3  },
-      { titulo: "Javascript", icon: SiJavascript  },
+      { titulo: "HTML5", icon: SiHtml5 },
+      { titulo: "Css3", icon: SiCss3 },
+      { titulo: "Javascript", icon: SiJavascript },
       ,
     ],
     titulo: "Barbearia Alura ",
@@ -77,9 +78,9 @@ const cards = [
     descricao:
       "Projeto desenvolvido no curso React.JS do 0 a Maestria, ministrado pelo Matheus Bathisti , que consiste em adivinhas a palavra escondida com  a dica e limite de erros!",
     tecnologias: [
-      { titulo: "React.js", icon: SiReact  },
-      { titulo: "Create React App", icon: SiCreatereactapp  },
-      { titulo: "Css3", icon: SiCss3  },
+      { titulo: "React.js", icon: SiReact },
+      { titulo: "Create React App", icon: SiCreatereactapp },
+      { titulo: "Css3", icon: SiCss3 },
     ],
     titulo: "Secret Word",
     image: SecretWordGif,
@@ -90,9 +91,9 @@ const cards = [
     descricao:
       "Projeto no intuito de gerar times Com RRMS proximos para equiparar times e jogar com os amigos na ranquiada, deixando as partidas mais divertidas e competitivas",
     tecnologias: [
-      { titulo: "HTML5", icon: SiHtml5  },
-      { titulo: "Css3", icon: SiCss3  },
-      { titulo: "Javascript.JS", icon: SiJavascript  },
+      { titulo: "HTML5", icon: SiHtml5 },
+      { titulo: "Css3", icon: SiCss3 },
+      { titulo: "Javascript.JS", icon: SiJavascript },
     ],
     titulo: "GTR6- Gerador de Times Raimbow Six Seage",
     image: Gtr6,
@@ -103,10 +104,10 @@ const cards = [
     descricao:
       "Calculadora construida com o layout da apple , calculadora simples ams funcional",
     tecnologias: [
-      { titulo: "React.js", icon: SiReact  },
-      { titulo: "Vite.js", icon: SiVite  },
-      { titulo: "Css3", icon: SiCss3  },
-      { titulo: "Typescript", icon: SiTypescript  },
+      { titulo: "React.js", icon: SiReact },
+      { titulo: "Vite.js", icon: SiVite },
+      { titulo: "Css3", icon: SiCss3 },
+      { titulo: "Typescript", icon: SiTypescript },
       ,
     ],
     titulo: "Calculadora Apple React.Js",

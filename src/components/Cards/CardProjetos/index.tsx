@@ -29,12 +29,14 @@ export default function CardProjetos({
   image,
 }: Props) {
   return (
-    <div className="flex max-w-4xl flex-col  p-2 my-2 w-full h-full  items-center justify-center bg-white border
-     border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-[#10101a] dark:bg-[#10101a] dark:hover:bg-gray-700">
+    <div
+      className="flex max-w-4xl flex-col  p-2 my-2 w-full h-full  items-center justify-center bg-white border
+     border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-[#10101a] dark:bg-[#10101a] dark:hover:bg-gray-700"
+    >
       <Image
         width={200}
         height={200}
-        className="object-cover max-w-lg cursor-move rounded-t-lg  h-full w-full rounded-xl "
+        className="object-contain max-w-lg cursor-move rounded-t-lg  h-full w-full rounded-xl "
         src={image}
         alt=""
       />
@@ -60,7 +62,6 @@ export default function CardProjetos({
                 key={i}
                 className="p-2 rounded-xl border border-[#dc2626] flex gap-2 justify-center items-center"
               >
-               
                 {React.createElement(item.icon)}
                 <p>{item.titulo}</p>
               </div>
