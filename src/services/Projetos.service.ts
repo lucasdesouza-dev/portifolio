@@ -5,6 +5,8 @@ import {
   SiGraphql,
   SiHtml5,
   SiJavascript,
+  SiNestjs,
+  SiPrisma,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -17,6 +19,7 @@ import SecretWordGif from "../../public/SecretWord.gif";
 import Calculadora from "../../public/calculadora.gif";
 import BarbeariaAluraGif from "../../public/BarbeariaAlura.gif";
 import ValoranteUI from "../../public/ValoranteUI.gif"
+import BackendNest from "../../public/BackendNest.jpeg"
 
 const cards = [
   {
@@ -51,13 +54,10 @@ const cards = [
       { titulo: "Graphql", icon: SiGraphql },
       { titulo: "Tailwind", icon: SiTailwindcss },
     ],
-    // referencias: {
-    //   url: "https://www.rocketseat.com.br/ignite",
-    //   titulo: "Ignite-Lab Rocketseat",
-    // },
+
     titulo: "ValorantUI",
     image: moviesLibGif,
-  },
+  }
   // {
   //   urlGit: "https://github.com/lucasdesouza-dev/Projeto-ignite-Lab",
   //   urlDemo:
@@ -76,7 +76,23 @@ const cards = [
   //     titulo: "Ignite-Lab Rocketseat",
   //   },
   //   titulo: "Ignite-Lab",
-  // },
+  //}
+  , {
+    urlGit: "https://github.com/lucasdesouza-dev/backend-nest.js",
+    urlDemo:
+      "https://nestjs.lucasdesouzadev.online/api/doc",
+    descricao:
+      "Projeto onde desenvolvo uma api com autenticaçao, envio de email e criaçao de usuario !",
+    tecnologias: [
+      { titulo: "Nest.js", icon: SiNestjs },
+      { titulo: "Prista", icon: SiPrisma },
+      { titulo: "Typescript", icon: SiTypescript },
+      { titulo: "Nestjs Mailer Module", icon: SiNestjs },
+
+    ],
+    titulo: "BackEnd com Nest.js",
+    image: BackendNest,
+  },
   {
     urlGit: "https://github.com/lucasdesouza-dev/Barbearia-Alura-Lucas",
     urlDemo: "https://lucasdesouza-dev.github.io/Barbearia-Alura-Lucas/",
