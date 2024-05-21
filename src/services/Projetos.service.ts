@@ -25,10 +25,10 @@ const cards = [
   {
     urlGit: "https://github.com/lucasdesouza-dev/The-Movie-App",
     urlDemo: "https://the-movie-app-git-master-lucashenriquesouza.vercel.app",
-    referencias: {
-      url: "https://developer.themoviedb.org/docs",
-      titulo: "Themoviedb",
-    },
+    // referencias: {
+    //   url: "https://developer.themoviedb.org/docs",
+    //   titulo: "Themoviedb",
+    // },
     descricao:
       "Aplicação com intuito de mostrar informações atualizadas de filmes , utizando a api da themoviedb para fornecer informações, ",
     tecnologias: [
@@ -38,7 +38,7 @@ const cards = [
       { titulo: "Typescript", icon: SiTypescript },
     ],
     titulo: "MoviesLib",
-    image: ValoranteUI,
+    image: moviesLibGif,
   }
   ,
   {
@@ -56,7 +56,7 @@ const cards = [
     ],
 
     titulo: "ValorantUI",
-    image: moviesLibGif,
+    image: ValoranteUI,
   }
   // {
   //   urlGit: "https://github.com/lucasdesouza-dev/Projeto-ignite-Lab",
