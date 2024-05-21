@@ -42,7 +42,7 @@ export default function HomeUser({ name, imageUrl, email }: User) {
         </div>
       </div>
       <motion.div
-        animate={{ y: [-30, 0, 50, 0, -30], x: [-50, 50, 60, -50] }}
+        animate={{ y: [-40, 0, 50, 0, -40], x: [-50, 30, 50, -50] }}
         transition={{ ease: "linear", duration: 3, repeat: Infinity }}
         className="  w-1/2  justify-center items-center hidden lg:flex">
         <Image
@@ -53,15 +53,6 @@ export default function HomeUser({ name, imageUrl, email }: User) {
           alt="Picture of the author"
         />
       </motion.div>
-      <div className="w-full flex items-center justify-center overflow-hidden lg:hidden">
-        <Image
-          className=" bg-[#dc2626] rounded-full h-[360px]  object-contain border-4 border-white "
-          src={profilePic}
-          width={360}
-          height={300}
-          alt="Picture of the author"
-        />
-      </div>
     </section>
   );
 }
