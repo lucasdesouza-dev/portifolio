@@ -25,10 +25,7 @@ const cards = [
   {
     urlGit: "https://github.com/lucasdesouza-dev/The-Movie-App",
     urlDemo: "https://the-movie-app-git-master-lucashenriquesouza.vercel.app",
-    // referencias: {
-    //   url: "https://developer.themoviedb.org/docs",
-    //   titulo: "Themoviedb",
-    // },
+    referencias: null,
     descricao:
       "Aplicação com intuito de mostrar informações atualizadas de filmes , utizando a api da themoviedb para fornecer informações, ",
     tecnologias: [

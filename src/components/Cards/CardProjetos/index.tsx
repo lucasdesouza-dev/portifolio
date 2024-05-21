@@ -16,7 +16,7 @@ interface Props {
   tecnologias?: any[] | undefined;
   urlGit: string;
   urlDemo: string;
-  referencias?: { url: string; titulo: string };
+  referencias?: { url: string; titulo: string } | null;
   image: any;
 }
 export default function CardProjetos({
@@ -31,8 +31,7 @@ export default function CardProjetos({
   return (
     <div
       className="flex max-w-4xl flex-col  p-2 my-2 w-full h-full  items-center justify-center bg-white border
-     border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-[#10101a] dark:bg-[#10101a] dark:hover:bg-gray-700"
-    >
+     border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-[#10101a] dark:bg-[#10101a] dark:hover:bg-gray-700">
       <Image
         width={200}
         height={200}
@@ -60,8 +59,7 @@ export default function CardProjetos({
             return (
               <div
                 key={i}
-                className="p-2 rounded-xl border border-[#dc2626] flex gap-2 justify-center items-center"
-              >
+                className="p-2 rounded-xl border border-[#dc2626] flex gap-2 justify-center items-center">
                 {React.createElement(item.icon)}
                 <p>{item.titulo}</p>
               </div>
@@ -71,15 +69,13 @@ export default function CardProjetos({
         <div className="flex justify-around">
           <a
             href={urlGit}
-            className="cursor-pointer p-2 flex gap-4 justify-center border border-[#dc2626] rounded-xl"
-          >
+            className="cursor-pointer p-2 flex gap-4 justify-center border border-[#dc2626] rounded-xl">
             <p>Github</p>
             <BsGithub size={25} />
           </a>
           <a
             href={urlDemo}
-            className="cursor-pointer p-2 flex gap-4 justify-center border border-[#dc2626] rounded-xl"
-          >
+            className="cursor-pointer p-2 flex gap-4 justify-center border border-[#dc2626] rounded-xl">
             <p>Demo</p>
             <BsFillArrowUpRightSquareFill size={25} />
           </a>

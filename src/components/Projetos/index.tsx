@@ -27,7 +27,7 @@ export default function Projetos() {
                 urlDemo={urlDemo}
                 descricao={descricao}
                 tecnologias={tecnologias}
-                referencias={item.referencias}
+                referencias={item?.referencias}
                 image={image}
               />
             </div>
