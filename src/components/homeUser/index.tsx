@@ -24,8 +24,8 @@ export default function HomeUser({ name, imageUrl, email }: User) {
             desenvolvedor <strong>FULL STACK</strong>
           </h2>
           <p>
-            Especialista em <strong>FRONT END</strong> <br /> Next.js e
-            React.js.
+            Especialista em <strong>FRONT END</strong> <br /> Next.js,
+            React.js e Angular.js
           </p>
 
           <p>
